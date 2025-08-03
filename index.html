@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Аренда PlayStation 5</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Аренда PlayStation 5</h1>
+        <nav>
+            <ul>
+                <li><a href="#cost">Стоимость проката</a></li>
+                <li><a href="#description">Описание</a></li>
+                <li><a href="#games">Игры</a></li>
+                <li><a href="#accessories">Аксессуары</a></li>
+                <li><a href="#rules">Правила проката</a></li>
+                <li><a href="#contacts">Контакты</a></li>
+                <li><a href="#payment">Варианты оплаты</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="cost">
+        <h2>Стоимость проката</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Срок проката</th>
+                    <th>Стоимость (BYN)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1 сутки</td>
+                    <td>[Цена 1]</td>
+                </tr>
+                <tr>
+                    <td>2 суток</td>
+                    <td>[Цена 2]</td>
+                </tr>
+                <tr>
+                    <td>3 суток</td>
+                    <td>[Цена 3]</td>
+                </tr>
+                <tr>
+                    <td>Неделя</td>
+                    <td>[Цена 4]</td>
+                </tr>
+                <tr>
+                    <td>Месяц</td>
+                    <td>[Цена 5]</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+     <section id="included">
+        <h2>Что включено</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Вариант проката</th>
+                    <th>Консоль</th>
+                    <th>Аксессуары</th>
+                    <th>Игры</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1 сутки</td>
+                    <td>Да</td>
+                    <td>Базовый набор</td>
+                    <td>Несколько игр</td>
+                </tr>
+                <tr>
+                    <td>2 суток</td>
+                    <td>Да</td>
+                    <td>Расширенный набор</td>
+                    <td>Больше игр</td>
+                </tr>
+                <tr>
+                    <td>3 суток</td>
+                    <td>Да</td>
+                    <td>Полный набор</td>
+                    <td>Все игры</td>
+                </tr>
+                <tr>
+                    <td>Неделя</td>
+                    <td>Да</td>
+                    <td>Полный набор</td>
+                    <td>Все игры</td>
+                </tr>
+                 <tr>
+                    <td>Месяц</td>
+                    <td>Да</td>
+                    <td>Полный набор</td>
+                    <td>Все игры</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+
+    <section id="description">
+        <h2>Описание консоли</h2>
+        <div id="console-description">
+            <!-- Описание консоли будет загружено из JSON -->
+         </div>
+    </section>
+
+
+    <section id="games">
+        <h2>Игры</h2>
+        <div id="games-list-preview">
+            <!-- Превью списка игр будет загружено из JSON -->
+         </div>
+        <a href="#" id="show-all-games">Показать все игры</a>
+        <div id="games-list-full" style="display: none;">
+            <!-- Полный список игр будет загружено из JSON -->
+         </div>
+    </section>
+
+    <section id="accessories">
+        <h2>Аксессуары</h2>
+         <div id="accessories-list-preview">
+            <!-- Превью списка аксессуаров будет загружено из JSON -->
+            [Превью аксессуаров placeholder]
+         </div>
+        <a href="#" id="show-all-accessories">Показать все аксессуары</a>
+        <div id="accessories-list-full" style="display: none;">
+            <!-- Полный список аксессуаров будет загружено из JSON -->
+         </div>
+    </section>
+   <section id="rules">
+        <h2>Правила проката</h2>
+        <div id="rules-content">
+            <!-- Правила проката будут добавлены здесь -->
+            [Правила проката placeholder]
+        </div>
+    </section>
+
+    <section id="contacts">
+        <h2>Контакты</h2>
+        <p>Где взять консоль: [Моковый адрес]</p>
+        <p>Контактный номер: [Моковый номер]</p>
+    </section>
+
+    <section id="payment">
+        <h2>Варианты оплаты</h2>
+        <ul>
+            <li>Наличные</li>
+            <li>Банковская карта</li>
+            <li class="payment-option" data-target="erip-instructions">ЕРИП</li>
+            <li class="payment-option" data-target="oplati-instructions">Оплати</li>
+        </ul>
+        <div id="erip-instructions" style="display: none;">
+            <h3>Инструкция по оплате через ЕРИП</h3>
+            <p>[Моковая инструкция для ЕРИП]</p>
+         </div>
+        <div id="oplati-instructions" style="display: none;">
+            <h3>Инструкция по оплате через Оплати</h3>
+            <p>[Моковая инструкция для Оплати]</p>
+        </div>
+    </section>
+    <script src="script.js"></script>
+</body>
+</html>

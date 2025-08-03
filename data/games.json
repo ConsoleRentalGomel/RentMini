@@ -1,0 +1,26 @@
+[
+    {
+        "name": "Cyberpunk 2077",
+        "description": "An open-world, action-adventure story set in Night City, a megalopolis obsessed with power, glamour and body modification.",
+        "players": "1",
+        "image_url": "https://via.placeholder.com/150/FF5733/FFFFFF?text=Game+1"
+    },
+    {
+        "name": "Elden Ring",
+        "description": "A fantasy action RPG adventure developed by FromSoftware Inc. and produced by Bandai Namco Entertainment Inc.",
+        "players": "1",
+        "image_url": "https://via.placeholder.com/150/33FF57/FFFFFF?text=Game+2"
+    },
+    {
+        "name": "FIFA 23",
+        "description": "The World’s Game – Play the beautiful game with over 19,000+ players, 700+ teams, 100+ stadiums and over 30 leagues.",
+        "players": "1-4",
+        "image_url": "https://via.placeholder.com/150/3357FF/FFFFFF?text=Game+3"
+    },
+    {
+        "name": "Grand Theft Auto V",
+        "description": "A young street hustler, a retired bank robber and a terrifying psychopath find themselves entangled with some of the most frightening and deranged elements of the criminal underworld.",
+        "players": "1",
+        "image_url": "https://via.placeholder.com/150/FFFF33/000000?text=Game+4"
+    }
+]
