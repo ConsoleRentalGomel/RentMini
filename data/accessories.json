@@ -1,17 +1,7 @@
 [
     {
-        "name": "Моковый аксессуар 1",
-        "description": "Дополнительный контроллер DualSense.",
-        "image_url": "https://via.placeholder.com/100"
-    },
-    {
-        "name": "Моковый аксессуар 2",
-        "description": "Беспроводная гарнитура Pulse 3D.",
-        "image_url": "https://via.placeholder.com/100"
-    },
-    {
-        "name": "Моковый аксессуар 3",
-        "description": "Зарядная станция для контроллеров.",
-        "image_url": "https://via.placeholder.com/100"
+        "name": "Контроллер DualSense",
+        "description": "Среди визуальных нововведений можно отметить световую панель, находящуюся под сенсорной панелью, кнопку «Create» вместо «Share», и обновленную кнопку PS, стилизованную под логотип PlayStation.\nГеймпад получил совершенно новую обратную связь «Adopted Haptic Feedback», встроенный микрофон, а также динамические сопротивление курков R2 и L2.",
+        "image_url": "./assets/ps_5_controller.jpg"
     }
 ]

@@ -1,52 +1,37 @@
-// Функция для загрузки JSON данных
-        async function loadJson(filename) {
-            try {
-                const response = await fetch(filename);
-                if (!response.ok) {
-                    throw new Error(`HTTP error! status: ${response.status}`);
-                }
-                return await response.json();
-            } catch (error) {
-                console.error(`Error loading ${filename}:`, error);
-                return null;
+document.addEventListener('DOMContentLoaded', function() {
+    // Функция для загрузки JSON данных
+    async function loadJson(filename) {
+        try {
+            const response = await fetch(filename);
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
             }
+            return await response.json();
+        } catch (error) {
+            console.error(`Error loading ${filename}:`, error);
+            return null;
         }
+    }
 
-        // Загрузка и отображение описания консоли
-        loadJson('data/console.json').then(data => {
-            if (data) {
-                document.getElementById('console-description').innerText = data.description;
-            }
+    // Функция для отображения списка игр или аксессуаров
+    function displayList(listId, data, isGame = true) {
+        const listElement = document.getElementById(listId);
+        if (!listElement) return;
+        
+        listElement.innerHTML = '';
+        data.forEach(item => {
+            const itemElement = document.createElement('div');
+            itemElement.innerHTML = `
+                <h3>${item.name}</h3>
+                <img src="${item.image_url}" alt="${item.name}">
+                <p>${item.description}</p>
+                ${isGame ? `<p>Игроков: ${item.players}</p>` : ''}
+            `;
+            listElement.appendChild(itemElement);
         });
+    }
 
-        // Функция для отображения списка игр или аксессуаров
-        function displayList(listId, data, isGame = true) {
-            const listElement = document.getElementById(listId);
-            listElement.innerHTML = ''; // Очищаем список перед заполнением
-
-            data.forEach(item => {
-                const itemElement = document.createElement('div');
-                itemElement.innerHTML = `
-                    <h3>${item.name}</h3>
-                    <img src="${item.image_url}" alt="${item.name}">
-                    <p>${item.description}</p>
-                    ${isGame ? `<p>Игроков: ${item.players}</p>` : ''}
-                `;
-                listElement.appendChild(itemElement);
-            });
-        }
-
-        // Загрузка и отображение списка игр
-        loadJson('data/games.json').then(data => {
-            if (data) {
-                // Отображаем превью (первые 2 игры)
-                displayList('games-list-preview', data.slice(0, 2), true);
-                // Сохраняем полный список для последующего отображения
-                window.fullGamesList = data;
-            }
-        });
-
-        // Загрузка и отображение списка аксессуаров
+            // Загрузка и отображение списка аксессуаров
         loadJson('data/accessories.json').then(data => {
             if (data) {
                 // Отображаем превью (первые 2 аксессуара)
@@ -56,50 +41,36 @@
             }
         });
 
-        // Обработчик для кнопки "Показать все игры"
-        document.getElementById('show-all-games').addEventListener('click', (e) => {
-            e.preventDefault();
-            document.getElementById('games-list-preview').style.display = 'none';
-            document.getElementById('games-list-full').style.display = 'block';
-            document.getElementById('show-all-games').style.display = 'none'; // Скрываем кнопку
-            if (window.fullGamesList) {
-                 displayList('games-list-full', window.fullGamesList, true);
+        
+    // Модальное окно для игр
+    const modal = document.getElementById('games-modal');
+    const btn = document.getElementById('show-games-modal');
+    const span = document.getElementsByClassName('close')[0];
+
+    if (btn && modal) {
+        btn.onclick = function() {
+            modal.style.display = 'block';
+        }
+    }
+
+    if (span && modal) {
+        span.onclick = function() {
+            modal.style.display = 'none';
+        }
+    }
+
+    if (modal) {
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = 'none';
             }
-        });
+        }
+    }
 
-         // Обработчик для кнопки "Показать все аксессуары"
-        document.getElementById('show-all-accessories').addEventListener('click', (e) => {
-            e.preventDefault();
-            document.getElementById('accessories-list-preview').style.display = 'none';
-            document.getElementById('accessories-list-full').style.display = 'block';
-            document.getElementById('show-all-accessories').style.display = 'none'; // Скрываем кнопку
-             if (window.fullAccessoriesList) {
-                displayList('accessories-list-full', window.fullAccessoriesList, false);
-             }
-        });
-
-
-        // Обработчики для вариантов оплаты
-        document.querySelectorAll('.payment-option').forEach(item => {
-            item.addEventListener('click', (e) => {
-                const targetId = e.target.dataset.target;
-                const targetElement = document.getElementById(targetId);
-
-                // Скрываем все инструкции
-                document.querySelectorAll('#payment div').forEach(div => {
-                    div.style.display = 'none';
-                });
-
-                // Показываем нужную инструкцию
-                if (targetElement) {
-                    targetElement.style.display = 'block';
-                }
-            });
-        });
-
-         // Добавляем правила проката
-        document.getElementById('rules-content').innerHTML = `
-            <h2>Правила проката</h2>
+    // Добавляем правила проката
+    const rulesContent = document.getElementById('rules-content');
+    if (rulesContent) {
+        rulesContent.innerHTML = `
             <ul>
                 <li>Для оформления договора проката необходим паспорт.</li>
                 <li>Срок проката начинается с момента подписания акта приема-передачи и заканчивается в момент возврата имущества по акту.</li>
@@ -111,3 +82,5 @@
                 <li>Досрочное расторжение договора возможно по соглашению сторон.</li>
             </ul>
         `;
+    }
+});

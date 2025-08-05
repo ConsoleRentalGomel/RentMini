@@ -1,27 +1,24 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Аренда PlayStation 5</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
     <header>
         <h1>Аренда PlayStation 5</h1>
-        <nav>
-            <ul>
-                <li><a href="#cost">Стоимость проката</a></li>
-                <li><a href="#description">Описание</a></li>
-                <li><a href="#games">Игры</a></li>
-                <li><a href="#accessories">Аксессуары</a></li>
-                <li><a href="#rules">Правила проката</a></li>
-                <li><a href="#contacts">Контакты</a></li>
-                <li><a href="#payment">Варианты оплаты</a></li>
-            </ul>
-        </nav>
     </header>
+
+    <section id="cost">
+        <p>
+            Время работы в Гомеле с 10:00 до 22:00 без выходных
+        </p>
+    </section>
 
     <section id="cost">
         <h2>Стоимость проката</h2>
@@ -35,106 +32,183 @@
             <tbody>
                 <tr>
                     <td>1 сутки</td>
-                    <td>[Цена 1]</td>
+                    <td>40</td>
                 </tr>
                 <tr>
                     <td>2 суток</td>
-                    <td>[Цена 2]</td>
+                    <td>80</td>
                 </tr>
                 <tr>
                     <td>3 суток</td>
-                    <td>[Цена 3]</td>
-                </tr>
-                <tr>
-                    <td>Неделя</td>
-                    <td>[Цена 4]</td>
-                </tr>
-                <tr>
-                    <td>Месяц</td>
-                    <td>[Цена 5]</td>
+                    <td>Бесплатно</td>
                 </tr>
             </tbody>
         </table>
     </section>
 
-     <section id="included">
+    <section id="included">
         <h2>Что включено</h2>
-        <table>
-            <thead>
-                <tr>
-                    <th>Вариант проката</th>
-                    <th>Консоль</th>
-                    <th>Аксессуары</th>
-                    <th>Игры</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>1 сутки</td>
-                    <td>Да</td>
-                    <td>Базовый набор</td>
-                    <td>Несколько игр</td>
-                </tr>
-                <tr>
-                    <td>2 суток</td>
-                    <td>Да</td>
-                    <td>Расширенный набор</td>
-                    <td>Больше игр</td>
-                </tr>
-                <tr>
-                    <td>3 суток</td>
-                    <td>Да</td>
-                    <td>Полный набор</td>
-                    <td>Все игры</td>
-                </tr>
-                <tr>
-                    <td>Неделя</td>
-                    <td>Да</td>
-                    <td>Полный набор</td>
-                    <td>Все игры</td>
-                </tr>
-                 <tr>
-                    <td>Месяц</td>
-                    <td>Да</td>
-                    <td>Полный набор</td>
-                    <td>Все игры</td>
-                </tr>
-            </tbody>
-        </table>
+        <ul>
+            <li>
+                Консоль PlayStation 5
+            </li>
+            <li>
+                Два контроллера DualSense
+            </li>
+        </ul>
     </section>
 
-
-    <section id="description">
-        <h2>Описание консоли</h2>
-        <div id="console-description">
-            <!-- Описание консоли будет загружено из JSON -->
-         </div>
-    </section>
 
 
     <section id="games">
         <h2>Игры</h2>
-        <div id="games-list-preview">
-            <!-- Превью списка игр будет загружено из JSON -->
-         </div>
-        <a href="#" id="show-all-games">Показать все игры</a>
-        <div id="games-list-full" style="display: none;">
-            <!-- Полный список игр будет загружено из JSON -->
-         </div>
+        <p>В наличии более 50 популярных игр для PlayStation 5</p>
+        <button id="show-games-modal" class="show-games-btn">Показать все игры</button>
     </section>
+
+    <!-- Модальное окно для игр -->
+    <div id="games-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Список игр</h2>
+            <div id="games-modal-content">
+                <div class="letter-section">
+                    <div class="letter-header">A</div>
+                    <ul class="game-list">
+                        <li class="game-item">Apex Legends</li>
+                        <li class="game-item">Astro's Playroom</li>
+                        <li class="game-item">Assassin's Creed IV: Black Flag</li>
+                    </ul>
+                </div>
+                <div class="letter-section">
+                    <div class="letter-header">B</div>
+                    <ul class="game-list">
+                        <li class="game-item">Battlefield 4</li>
+                        <li class="game-item">Battlefield 2042</li>
+                    </ul>
+                </div>
+                <div class="letter-section">
+                    <div class="letter-header">C</div>
+                    <ul class="game-list">
+                        <li class="game-item">Call of Duty: Modern Warfare II</li>
+                        <li class="game-item">Call of Duty: Warzone</li>
+                        <li class="game-item">Cyberpunk 2077</li>
+                    </ul>
+                </div>
+                <div class="letter-section">
+                    <div class="letter-header">D</div>
+                    <ul class="game-list">
+                        <li class="game-item">Days Gone</li>
+                        <li class="game-item">Death Stranding</li>
+                        <li class="game-item">Destiny 2</li>
+                        <li class="game-item">Detroit: Become Human</li>
+                    </ul>
+                </div>
+                <div class="letter-section">
+                    <div class="letter-header">F</div>
+                    <ul class="game-list">
+                        <li class="game-item">FIFA 20</li>
+                        <li class="game-item">FIFA 21</li>
+                        <li class="game-item">FIFA 22</li>
+                        <li class="game-item">FIFA 23</li>
+                        <li class="game-item">FIFA 24 (PS5)</li>
+                        <li class="game-item">Fortnite</li>
+                    </ul>
+                </div>
+                <div class="letter-section">
+                    <div class="letter-header">G</div>
+                    <ul class="game-list">
+                        <li class="game-item">God of War (2018)</li>
+                        <li class="game-item">God of War: Ragnarök</li>
+                        <li class="game-item">Gran Turismo Sport</li>
+                        <li class="game-item">Grand Theft Auto V (GTA 5)</li>
+                    </ul>
+                </div>
+                <div class="letter-section">
+                    <div class="letter-header">H</div>
+                    <ul class="game-list">
+                        <li class="game-item">Hogwarts Legacy (PS5)</li>
+                        <li class="game-item">Horizon Forbidden West (PS5)</li>
+                        <li class="game-item">Horizon Zero Dawn</li>
+                    </ul>
+                </div>
+                <div class="letter-section">
+                    <div class="letter-header">I</div>
+                    <ul class="game-list">
+                        <li class="game-item">Injustice 2</li>
+                        <li class="game-item">It Takes Two</li>
+                    </ul>
+                </div>
+                <div class="letter-section">
+                    <div class="letter-header">L</div>
+                    <ul class="game-list">
+                        <li class="game-item">Last of Us, The</li>
+                        <li class="game-item">Last of Us Part 2, The</li>
+                        <li class="game-item">LEGO Marvel Avengers</li>
+                    </ul>
+                </div>
+                <div class="letter-section">
+                    <div class="letter-header">M</div>
+                    <ul class="game-list">
+                        <li class="game-item">Mortal Kombat X</li>
+                        <li class="game-item">Mortal Kombat XL</li>
+                        <li class="game-item">Mortal Kombat 11</li>
+                    </ul>
+                </div>
+                <div class="letter-section">
+                    <div class="letter-header">P</div>
+                    <ul class="game-list">
+                        <li class="game-item">Plants vs. Zombies: Battle for Neighborville</li>
+                        <li class="game-item">Plants vs. Zombies 2</li>
+                    </ul>
+                </div>
+                <div class="letter-section">
+                    <div class="letter-header">R</div>
+                    <ul class="game-list">
+                        <li class="game-item">Rayman Legends</li>
+                        <li class="game-item">Resident Evil Village (PS5)</li>
+                        <li class="game-item">Rocket League</li>
+                    </ul>
+                </div>
+                <div class="letter-section">
+                    <div class="letter-header">S</div>
+                    <ul class="game-list">
+                        <li class="game-item">Spider-Man</li>
+                        <li class="game-item">Spider-Man 2 (PS5)</li>
+                        <li class="game-item">Spider-Man: Miles Morales</li>
+                        <li class="game-item">Star Wars Battlefront II</li>
+                    </ul>
+                </div>
+                <div class="letter-section">
+                    <div class="letter-header">U</div>
+                    <ul class="game-list">
+                        <li class="game-item">UFC 3</li>
+                        <li class="game-item">UFC 4</li>
+                        <li class="game-item">Uncharted 4: A Thief's End</li>
+                    </ul>
+                </div>
+                <div class="letter-section">
+                    <div class="letter-header">W</div>
+                    <ul class="game-list">
+                        <li class="game-item">Watch Dogs: Legion (PS5)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <section id="accessories">
         <h2>Аксессуары</h2>
-         <div id="accessories-list-preview">
+        <div id="accessories-list-preview">
             <!-- Превью списка аксессуаров будет загружено из JSON -->
             [Превью аксессуаров placeholder]
-         </div>
-        <a href="#" id="show-all-accessories">Показать все аксессуары</a>
+        </div>
+
         <div id="accessories-list-full" style="display: none;">
             <!-- Полный список аксессуаров будет загружено из JSON -->
-         </div>
+        </div>
     </section>
-   <section id="rules">
+    <section id="rules">
         <h2>Правила проката</h2>
         <div id="rules-content">
             <!-- Правила проката будут добавлены здесь -->
@@ -144,22 +218,16 @@
 
     <section id="contacts">
         <h2>Контакты</h2>
-        <p>Где взять консоль: [Моковый адрес]</p>
-        <p>Контактный номер: [Моковый номер]</p>
+        <p>Телефон: +37544 724 51 91</p>
+        <p>Где взять консоль: Уточняйте по телефону.</p>
     </section>
 
     <section id="payment">
         <h2>Варианты оплаты</h2>
         <ul>
             <li>Наличные</li>
-            <li>Банковская карта</li>
-            <li class="payment-option" data-target="erip-instructions">ЕРИП</li>
-            <li class="payment-option" data-target="oplati-instructions">Оплати</li>
+            <li>ЕРИП</li>
         </ul>
-        <div id="erip-instructions" style="display: none;">
-            <h3>Инструкция по оплате через ЕРИП</h3>
-            <p>[Моковая инструкция для ЕРИП]</p>
-         </div>
         <div id="oplati-instructions" style="display: none;">
             <h3>Инструкция по оплате через Оплати</h3>
             <p>[Моковая инструкция для Оплати]</p>
@@ -167,4 +235,5 @@
     </section>
     <script src="script.js"></script>
 </body>
+
 </html>
