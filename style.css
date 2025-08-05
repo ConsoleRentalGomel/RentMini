@@ -246,6 +246,25 @@ p {
     box-shadow: 0 6px 20px rgba(0,0,0,0.3);
 }
 
+.full-rules-btn {
+    display: inline-block;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+    text-decoration: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 8px;
+    font-weight: 500;
+    margin-top: 1rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+}
+
+.full-rules-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    color: white;
+}
+
 .modal {
     display: none;
     position: fixed;
